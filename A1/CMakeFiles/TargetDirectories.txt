@@ -1,0 +1,3 @@
+/home/klorb/CSI3131/A1/CMakeFiles/rebuild_cache.dir
+/home/klorb/CSI3131/A1/CMakeFiles/dp.dir
+/home/klorb/CSI3131/A1/CMakeFiles/edit_cache.dir

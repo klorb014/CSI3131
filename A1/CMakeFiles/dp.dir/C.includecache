@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/klorb/CSI3131/A1/dp.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+errno.h
+-
+unistd.h
+-
+sys/types.h
+-
+
