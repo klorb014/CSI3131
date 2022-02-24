@@ -56,9 +56,45 @@ int main(int argc, char *argv[])
    //exit(doublePipe(cmd1,cmd2,cmd3));
 
    printf( "\nYou entered: %d \n", val);
-   int prime = isPrime(val);
-   printf("Is Prime: %d \n", prime);
-   printf( " %d \n", val/2);
+
+   int* array = calloc(val, sizeof(int) );
+
+   int i;
+   for ( i = 0; i < val; i++ ){
+     array[i] = i+1;
+   }
+
+  int leftPtr = 0;
+  int rightPtr = val - 1;
+
+  int result[2];
+  int left;
+  int right;
+  while (rightPtr > leftPtr){
+    left = array[leftPtr];
+    right = array[rightPtr];
+    
+    if (isPrime(left) == 1 && isPrime(right) == 1){
+      printf("%d %d \n", left, right);
+      if (left + right == val){
+        break;
+      } else if (left + right > val){
+        rightPtr -= 1;
+      }else{
+        leftPtr += 1;
+      }
+    }else if (isPrime(left) == 1 && isPrime(right) != 1){
+      rightPtr -= 1;
+    }else if (isPrime(left) != 1 && isPrime(right) == 1){
+      leftPtr += 1;
+    }else{
+      rightPtr -= 1;
+      leftPtr += 1;
+    }
+  }
+
+   free(array);
+	  
 
    return 0;
 
